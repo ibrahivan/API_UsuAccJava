@@ -32,6 +32,31 @@ public class Acceso {
     
 	
 
+	public void setId_acceso(Long id_acceso) {
+		this.id_acceso = id_acceso;
+	}
+
+
+	public void setCodigo_acceso(String codigo_acceso) {
+		this.codigo_acceso = codigo_acceso;
+	}
+
+
+	public void setDescripcion_acceso(String descripcion_acceso) {
+		this.descripcion_acceso = descripcion_acceso;
+	}
+
+
+	public void setUsuariosConAcceso(List<Usuario> usuariosConAcceso) {
+		this.usuariosConAcceso = usuariosConAcceso;
+	}
+
+
+	public Long getId_acceso() {
+		return id_acceso;
+	}
+
+
 	public String getCodigo_acceso() {
 		return codigo_acceso;
 	}

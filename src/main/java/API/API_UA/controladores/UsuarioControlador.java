@@ -25,7 +25,7 @@ public class UsuarioControlador {
 	@GetMapping 
 	public List<Usuario> getAllUsuarios(){
 		List<Usuario>usuarios=usuarioServicio.getAllUser();
-		System.out.println("Usuarios: "+usuarios.size());
+		System.out.println("Usuarios: "+usuarios);
 		return usuarios;
 		}
 	

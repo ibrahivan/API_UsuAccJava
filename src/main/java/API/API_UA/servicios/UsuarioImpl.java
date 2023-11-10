@@ -18,6 +18,7 @@ public class UsuarioImpl implements UsuarioServicio {
 	/*
 	 * Metodo de escoger todos los usuarios
 	 */
+	@Override
 	public List<Usuario> getAllUser(){
 		return usuarioRepositorio.findAll();
 	}
@@ -26,6 +27,7 @@ public class UsuarioImpl implements UsuarioServicio {
 	/*
 	 * Metodo de escoger usuario por id
 	 */
+	@Override
 	public Usuario getUserById(Long usuarId)
 	{
 		Optional<Usuario>usuarioOpt=usuarioRepositorio.findById(usuarId);
@@ -38,6 +40,7 @@ public class UsuarioImpl implements UsuarioServicio {
 	/*
 	 * Metodo para guardar un usuario
 	 */
+	@Override
 	public void saveUsuario(Usuario usuario) {
 		Usuario usuarioDetalle= usuarioRepositorio.save(usuario);
 		System.out.println("Usuario guardado en la base de datos con el id: "+usuarioDetalle.getId_usuario());
@@ -46,6 +49,7 @@ public class UsuarioImpl implements UsuarioServicio {
 	/*
 	 * Metodo para actualizar un usuario
 	 */
+	@Override
 	public void updateUsuario(Usuario usuario, Long usuarioId) {
 		Optional<Usuario>usuarioDetalleOpt = usuarioRepositorio.findById(usuarioId);
 		if(usuarioDetalleOpt.isPresent()) {
@@ -89,6 +93,7 @@ public class UsuarioImpl implements UsuarioServicio {
 	/*
 	 * Metodo para borrar un usuario por el id
 	 */
+	@Override
 	public void deleteUsuarioById(Long usuarioId) {
 		Optional<Usuario> usuarioOpt=usuarioRepositorio.findById(usuarioId);
 		
